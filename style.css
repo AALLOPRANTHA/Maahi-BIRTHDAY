@@ -1,0 +1,116 @@
+body {
+    background-color: #ffd1dc; /* Metallic pink background */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ff69b4;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 1px 1px 2px #d64f83;
+}
+
+p {
+    font-size: 1.2em;
+    color: #ffe4e9;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    background-color: #ff66b2; /* Metallic pink button */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+/* Sunflower shower styling */
+.sunflower-shower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Generating multiple falling sunflowers */
+.sunflower-shower::before,
+.sunflower-shower::after,
+.sunflower-shower .sunflower {
+    content: url('Sunflower.png'); /* Replace with the URL/path to your sunflower image */
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    animation: fall 5s linear infinite;
+    opacity: 0;
+}
+
+/* Different positions and animations for sunflowers */
+.sunflower-shower::before {
+    left: 20%;
+    animation-delay: 0s;
+    animation-duration: 4s;
+}
+
+.sunflower-shower::after {
+    left: 80%;
+    animation-delay: 1s;
+    animation-duration: 6s;
+}
+
+.sunflower-shower .sunflower:nth-child(1) {
+    left: 40%;
+    animation-delay: 2s;
+    animation-duration: 5s;
+}
+
+.sunflower-shower .sunflower:nth-child(2) {
+    left: 60%;
+    animation-delay: 3s;
+    animation-duration: 6s;
+}
+
+.sunflower-shower .sunflower:nth-child(3) {
+    left: 10%;
+    animation-delay: 1.5s;
+    animation-duration: 7s;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Part About You</title>
+    <style>
+        /* Background and body styling */
+        body {
+            background: linear-gradient(135deg, #ffcccc, #ff99cc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* Main container */
+        .container {
+            position: relative;
+            z-index: 10;
+            padding: 20px;
+        }
+
+        /* Main title styling */
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ff1493;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 2s ease;
+        }
+
+        /* Subtext styling */
+        p {
+            font-size: 1.5em;
+            color: #ffffff;
+            font-style: italic;
+            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 2.5s ease;
+        }
+
+        /* Boyfriend image styling */
+        .boyfriend-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+            animation: scaleUp 3s ease-in-out;
+        }
+
+        /* Boyfriend image animation */
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Confetti effect */
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 15px;
+            height: 15px;
+            background-color: #ff99cc;
+            opacity: 0.8;
+            border-radius: 50%;
+            animation: fall 4s infinite ease-in-out;
+        }
+
+        /* Confetti animation for falling */
+        @keyframes fall {
+            0% {
+                transform: translateX(0) translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateX(calc(100vw - 50%)) translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Title and paragraph animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main content container -->
+    <div class="container">
+        <h1>The Best Part About You...</h1>
+        <p>...is your amazing boyfriend! 💖</p>
+        
+        <!-- Boyfriend's Image -->
+        <img src="Boyfriend.jpg" alt="Boyfriend" class="boyfriend-img">
+    </div>
+
+    <!-- Confetti elements for effect -->
+    <script>
+        // Function to create and animate confetti
+        function createConfetti() {
+            const confetti = document.createElement("div");
+            confetti.classList.add("confetti");
+            document.body.appendChild(confetti);
+
+            // Randomize confetti position, size, and delay
+            confetti.style.left = Math.random() * 100 + "vw";
+            confetti.style.animationDelay = Math.random() * 3 + "s";
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 75%)`;
+
+            // Remove confetti after falling
+            setTimeout(() => {
+                confetti.remove();
+            }, 4000);
+        }
+
+        // Continuously create confetti at intervals
+        setInterval(createConfetti, 300);
+    </script>
+</body>
+</html>

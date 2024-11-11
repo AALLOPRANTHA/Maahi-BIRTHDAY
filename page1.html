@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Lane</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffe6f0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #ff66a3;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #ff66a3;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .memory-lane {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .memory {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .memory:hover {
+            transform: scale(1.05);
+        }
+
+        .memory img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .memory .backstory {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 102, 163, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            font-size: 1em;
+            line-height: 1.4em;
+            transition: opacity 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .memory:hover .backstory {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .description {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Memory Lane</h1>
+    <p class="description">SAARI TOH NAHI SOME SNAPSHOT OF THINGS ID LIKE TO SHARE</p>
+
+    <div class="memory-lane">
+        <div class="memory">
+            <img src="us.jpg?text=Memory+1" alt="Memory 1">
+            <div class="backstory">omg how can i forget this that hug felt like "ek sachii sukoon ki neend" it was so special can't imagine what i couldve missed out upon
+                thank you for letting me know i am taller ahahha😎  </div>
+        </div>
+        <div class="memory">
+            <img src="MERI_HAI.jpg?text=Memory+2" alt="Memory 2">
+            <div class="backstory">eating your lip gloss of might be my fav part of this day after kissing you endlessly still my fav thing to do and also
+                looking at you from my head resting in your lap THATS BEST VIEW ANYONE CAN EVER HAVE i'd envy the person you'd marry</div>.</div>
+        <div class="memory">
+            <img src="Us2.png?text=Memory+3" alt="Memory 3">
+            <div class="backstory">ITNA peeche padna pada tha milne ke liye...omg but definetly worth every second now i look at it i toh forget JUHI BHI THI😭 the time i saw you waha PVR mai through 
+                the glass standing that feel i am addicted YOU ARE GENUINLY the most sundar person ive known the giggle while kissing you was HEAVNLIKE trust me.     
+            </div>
+        </div>
+        <div class="memory">
+            <img src="GG.jpg?text=Memory+4" alt="Memory 4">
+            <div class="backstory">I never wouldve thought id love this (YES I DO) hehe... THIS SHOW WILL ALWAYS REMIND ME HOW WONDERFULL AND FULL OF NICE THINGS YOU ARE BABE</div>
+        </div>
+        <div class="memory">
+            <img src="NOTE.jpg?text=Memory+5" alt="Memory 5">
+            <div class="backstory">My notes are filled with these.</div>
+        </div>
+        <div class="memory">
+            <img src="KORA.jpg?text=Memory+6" alt="Memory 6">
+            <div class="backstory">My notes are filled with these.</div>
+        </div>
+        <div class="memory">
+            <img src="KISSME.jpg?text+Memory+7" alt="Memory 7">
+            <div class="backstory">YOU ARE THE SUN TO ME</div>
+        </div>
+        <div class="memory">
+            <img src="GILMORE.png?text+Memory+8" alt="Memory 8">
+            <div class="backstory">US?</div>
+        </div>
+        <!-- Add more memories by duplicating the .memory divs and changing the image and backstory text -->
+    </div>
+
+</body>
+</html>

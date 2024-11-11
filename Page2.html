@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Video Page</title>
+    <style>
+        /* Basic body styling */
+        body {
+            background-color: #ffccff; /* Soft pink background */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Video container styling */
+        .video-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Video styling */
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* Play/Pause button styling */
+        .play-pause-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(255, 105, 180, 0.8); /* Pink overlay for button */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Show button on hover */
+        .video-container:hover .play-pause-btn {
+            opacity: 1;
+        }
+
+        /* Button styling when hovered */
+        .play-pause-btn:hover {
+            background-color: rgba(255, 20, 147, 0.9); /* Darker pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="birthdayVideo" autoplay loop>
+            <source src="birthday.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video
